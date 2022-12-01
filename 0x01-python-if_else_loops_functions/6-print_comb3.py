@@ -4,4 +4,3 @@ for i in range(8):
         if j > i:
             print("{:d}{:d}, " .format(i, j), end='')
 print("{:d}".format(89))
-
