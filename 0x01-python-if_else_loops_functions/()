@@ -26,20 +26,9 @@ listint_t *insert_node(listint_t **head, int number)
 		return (NULL);
 
 	new->n = number;
-	old = NULL;
+	new->next = current->next;
 
-	for (; current != NULL && current->n < number;)
-	{
-		old = current;
-		current = current->next;
-	}
-
-	new->next = current;
-
-	if (old != NULL)
-		old->next = new;
-	else
-		current->next = new;
+	current->next = new;
 
 	return (new);
 }
