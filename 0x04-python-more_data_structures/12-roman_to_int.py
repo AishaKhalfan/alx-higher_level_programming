@@ -10,4 +10,4 @@ def roman_to_int(roman_string):
             ans = ans - val[s[i]]
         else:
             ans = ans + val[s[i]]
-    return ans 
+    return ans
