@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Square module contains a class that defines a square
+"""Square module
+It contains a class that defines a square and init method that
+sets its size and schecking if the given values are right. There's also an
+area method that returns the area  of the square
 """
 
 
@@ -15,7 +18,7 @@ class Square():
             ValueError: if size is less than 0
         """
         if type(size) is int:
-            if size > 0:
+            if size >= 0:
                 self.__size = size
             else:
                 raise ValueError("size must be >= 0")
