@@ -10,7 +10,7 @@ method that handles the print of the square
 
 class Square():
     """Defines a square"""
-    
+
     def __init__(self, size=0):
         """Sets the necessary attributes for the Square object
         Args:
