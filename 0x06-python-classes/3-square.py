@@ -24,6 +24,5 @@ class Square():
 
     def area(self):
         return self.__size ** 2
-        #Square.area()
         area1 = Square()
         area1.area()
