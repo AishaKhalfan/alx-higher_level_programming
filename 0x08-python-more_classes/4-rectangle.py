@@ -18,10 +18,6 @@ class Rectangle():
         self.height = height
         self.width = width
 
-    def __repr__(self):
-        """sets the repr behavior of the rectangle object"""
-        return "Rectangle({:d}, {:d})".format(self.__height, self.__width)
-
     def __str__(self):
         """sets the print behavior of the rectangle"""
         rectangle = ""
@@ -29,7 +25,12 @@ class Rectangle():
         if self.__height > 0 and self.__width > 0:
             for x in range(self.__height):
                 rectangle += '#' * self.__width + '\n'
+
         return rectangle[:-1]
+
+    def __repr__(self):
+        """sets the repr behavior of the rectangle object"""
+        return "Rectangle({:d}, {:d})".format(self.__height, self.__width)
 
     @property
     def height(self):
