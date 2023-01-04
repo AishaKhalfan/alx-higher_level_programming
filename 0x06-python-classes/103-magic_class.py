@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """MagicClas Modules.
 It does exactly the same as the given Python bytecode
 it contains 2 classes that return area and circumference of a circle
