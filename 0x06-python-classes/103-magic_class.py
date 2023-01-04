@@ -1,9 +1,10 @@
 #!/usr/bin/python
-import math
 """MagicClas Modules
 It does exactly the same as the given Python bytecode
 it contains 2 classes that return area and circumference of a circle
 """
+
+import math
 
 
 class MagicClass():
@@ -16,7 +17,9 @@ class MagicClass():
             return self.__radius
 
     def area(self):
+        """defines the area of a circle"""
         return math.pi * self.__radius ** 2
 
     def circumference(self):
+        """Defines the circumference of a circle"""
         return 2 * math.pi * self.__radius
