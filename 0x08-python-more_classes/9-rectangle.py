@@ -81,7 +81,8 @@ class Rectangle():
     @classmethod
     def square(cls, size=0):
         """Returns a new Rectangle instance with equals width and height."""
-        return cls(size, size)
+        if size is not 0 and size > 0:
+            return cls(size, size)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
