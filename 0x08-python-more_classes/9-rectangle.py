@@ -21,22 +21,6 @@ class Rectangle():
         self.width = width
         type(self).number_of_instances += 1
 
-    @classmethod
-    def square(cls, size=0):
-        """Returns a new rectangle instance with eqaul width and height"""
-        return cls(size, size)
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """Returns the biggest rectangle based on area"""
-        if type(rect_1) is not Rectangle:
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if type(rect_2) is not Rectangle:
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_2.area() > rect_1.area():
-            return rect_2
-        return rect_1
-
     def __str__(self):
         """sets the print behavior of the rectangle"""
         rectangle = ""
@@ -50,13 +34,6 @@ class Rectangle():
     def __repr__(self):
         """sets the repr behavior of the rectangle object"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """Prints the message Bye rectangle...
-        when an instance of Rectangle is deleted
-        """
-        print("Bye rectangle...")
-        type(self).number_of_instances -= 1
 
     @property
     def width(self):
@@ -100,3 +77,24 @@ class Rectangle():
             return 0
         else:
             return (self.__height + self.__width) * 2
+
+    @classmethod
+    def square(cls, size=0):
+        """Returns a new Rectangle instance with equals width and height."""
+        return cls(size, size)
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Returns the biggest rectangle, or rect_1 if equals."""
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        return rect_1
+
+    def __del__(self):
+        """Sets the del behavior of the Rectangle object."""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
