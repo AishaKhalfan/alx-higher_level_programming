@@ -30,23 +30,7 @@ class Rectangle():
 
     def __repr__(self):
         """sets the repr behavior of the rectangle object"""
-        return "Rectangle({:d}, {:d})".format(self.__height, self.__width)
-
-    @property
-    def height(self):
-        """Retrieves height of rectangle"""
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """To set height of rectangle"""
-        if type(value) is int:
-            if value >= 0:
-                self.__height = value
-            else:
-                raise ValueError("height must be >= 0")
-        else:
-            raise TypeError("height must be an integer")
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     @property
     def width(self):
@@ -64,9 +48,25 @@ class Rectangle():
         else:
             raise TypeError("width must be an integer")
 
+    @property
+    def height(self):
+        """Retrieves height of rectangle"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """To set height of rectangle"""
+        if type(value) is int:
+            if value >= 0:
+                self.__height = value
+            else:
+                raise ValueError("height must be >= 0")
+        else:
+            raise TypeError("height must be an integer")
+
     def area(self):
         """Prints the area of the rectangle"""
-        return self.__height * self.__width
+        return self.__width * self.__height
 
     def perimeter(self):
         """returns the perimeter of the rectangle"""
