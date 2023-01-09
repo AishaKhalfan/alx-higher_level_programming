@@ -5,7 +5,7 @@ It inherits from List
 """
 
 
-class MyList(List):
+class MyList(list):
     """a subclass of list"""
     def __init__(self):
         """initializes the object"""
