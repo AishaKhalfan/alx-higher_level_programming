@@ -11,14 +11,14 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """Instantiates Rectangle"""
-        self.integer_validator("width", self.__width)
+        self.integer_validator("width", width)
         self.__width = width
-        self.integer_validator("height", self.__height)
+        self.integer_validator("height", height)
         self.__height = height
 
     def __str__(self):
         """Sets the str behavior."""
-        return "[Rectangle] + {:d}/{:d}".format(self.__width, self.__height)
+        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
 
     def area(self):
         """implementing area method"""
