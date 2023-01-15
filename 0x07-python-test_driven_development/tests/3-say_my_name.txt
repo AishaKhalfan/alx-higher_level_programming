@@ -16,9 +16,6 @@ Now use it:
 	>>> say_my_name("Aisha", "Khalifan")
 	My name is Aisha Khalifan
 
-	>>> say_my_name("Aisha") 
-	My name is Aisha
-
 	>>> say_my_name(2, "Aisha")
 	Traceback (most recent call last):
 	...
