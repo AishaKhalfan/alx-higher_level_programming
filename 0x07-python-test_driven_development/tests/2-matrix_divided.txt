@@ -28,7 +28,6 @@ Now use it:
 	...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-
 	>>> matrix_divided([[1, "Holberton", 3], [4, 5, 6]], 3)
 	Traceback (most recent call last):
 	...
