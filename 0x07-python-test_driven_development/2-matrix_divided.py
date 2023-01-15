@@ -1,5 +1,4 @@
-#
-/usr/bin/python3
+#/usr/bin/python3
 """
 This is the 2-matrix_divided module.
 The 2-matrix_divided module supplies one function,matrix_divided()
@@ -32,7 +31,7 @@ def matrix_divided(matrix, div):
             raise TypeError(mtrx_lenError)
         row_len = len(row)
 
-    if type(div) is not in [int, float]:
+    if type(div) not in [int, float]:
         raise TypeError(div_typError)
     if div is 0:
         raise ZeroDivisionError(div_zeroError)
