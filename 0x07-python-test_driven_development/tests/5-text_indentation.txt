@@ -10,8 +10,8 @@ String:
 <BLANKLINE>
 2?
 <BLANKLINE>
->>> text_indentation(“Holberton. School? How are you: John”)
-Hoberton.
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
 <BLANKLINE>
 School?
 <BLANKLINE>
