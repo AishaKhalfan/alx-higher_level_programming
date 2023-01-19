@@ -14,7 +14,7 @@ class Rectangle(Base):
         __y (int): the vertical (y) padding of the rectangle.
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None)
+    def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes the default attributes of the Base object
         Args:
             width (int): the wanted width of the rectangle.
