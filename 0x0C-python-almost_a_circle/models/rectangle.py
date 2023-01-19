@@ -44,7 +44,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Get and set the width attr of the Rectangle"""
+        """Get and set the height attr of the Rectangle"""
         self.__height
 
     @height.setter
@@ -53,3 +53,21 @@ class Rectangle(Base):
             self.__height = value
         else:
             raise TypeError("")
+
+    # x attribute getter and setter
+    @property
+    def x(self):
+        self.__x
+
+    @x.setter
+    def x(self, value):
+        self.__x = value
+
+    # y attribute getter and setter
+    @property
+    def y(self):
+        self.__y
+
+    @y.setter
+    def y(self, value):
+        self.__y = value
