@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 10-student.py
+# 11-student.py
 """Defines a class Student"""
 
 
@@ -24,7 +24,10 @@ class Student:
         return self.__dict__
 
     def reload_from_json(self, json):
-        """Replaces all attributes of the Student instance"""
+        """Replaces all attributes of the Student instance
         self.first_name = json['first_name']
         self.last_name = json['last_name']
         self.age = json['age']
+        """
+        for k, v in json.items():
+            setattr(self, k, v)
