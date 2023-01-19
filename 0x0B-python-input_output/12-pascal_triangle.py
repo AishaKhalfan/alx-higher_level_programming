@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-
-from math import factorial
+# 14-pascal_triangle.py
+"""Defines a Pascal's Triangle function."""
 
 
 def pascal_triangle(n):
+    """Returns Pascals Triangle of size n"""
     if n <= 0:
         return []
+
     # create an empty list to store the triangle
     t = []
     # loop through each row
