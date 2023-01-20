@@ -24,11 +24,11 @@ class Rectangle(Base):
             id (int): the wanted identifier of the Base object.
         """
 
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     def __str__(self):
         """Overrides the default behaviour of the __str__ method."""
