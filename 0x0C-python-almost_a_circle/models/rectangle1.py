@@ -15,7 +15,7 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initializes the default attributes of the Base object.
+        """Initializes the default attributes of the Base object
         Args:
             width (int): the wanted width of the rectangle.
             height (int): the wanted height of the rectangle.
@@ -23,6 +23,7 @@ class Rectangle(Base):
             y (int): the wanted vertical (y) padding of the rectangle.
             id (int): the wanted identifier of the Base object.
         """
+
         super().__init__(id)
         self.width = width
         self.height = height
@@ -34,11 +35,10 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
 
-    # width attribute getter and setter.
     @property
     def width(self):
-        """Get and Set the width attribute of the Rectangle."""
-        return self.__width
+        """Get and set the width attr of the Rectangle"""
+        self.__width
 
     @width.setter
     def width(self, value):
@@ -46,13 +46,12 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
+        self.__width = value)
 
-    # height attribute getter and setter.
     @property
     def height(self):
-        """Get and Set the height attribute of the Rectangle."""
-        return self.__height
+        """Get and set the height attr of the Rectangle"""
+        self.__height
 
     @height.setter
     def height(self, value):
@@ -62,11 +61,10 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-    # x attribute getter and setter.
+    # x attribute getter and setter
     @property
     def x(self):
-        """Get and Set the x attribute of the Rectangle."""
-        return self.__x
+        self.__x
 
     @x.setter
     def x(self, value):
@@ -76,11 +74,10 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-    # y attribute getter and setter.
+    # y attribute getter and setter
     @property
     def y(self):
-        """Get and Set the y attribute of the Rectangle."""
-        return self.__y
+        self.__y
 
     @y.setter
     def y(self, value):
@@ -89,8 +86,3 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-
-    # Methods
-    def area(self):
-        """Returns the area value of the Rectangle instance."""
-        return self.width * self.height
