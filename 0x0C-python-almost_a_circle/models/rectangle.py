@@ -115,4 +115,5 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) >= 5:
                 self.y = args[4]
-                # keys = ['id', 'width', 'height', 'x', 'y']
+            return
+            # keys = ['id', 'width', 'height', 'x', 'y']
