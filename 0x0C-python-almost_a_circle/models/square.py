@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+"""This is the Square module.
+Contains the Square class that inherits from Rectangle
+"""
+from models.rectangle import Rectangle
+
+
+class Square(Rectangle):
+    """This class inherits from the Rectangle and defines a square object.
+    Attributes:
+    __size (int): size of the square
+    __x (int): horizontal padding of the square
+    __y (int): vertical padding of the square
+    """
+
+    def __init__(self, size, x=0, y=0, id=None):
+        """Initializes the default attributes of the Base object.
+        Args:
+            size (int): the size of a square side.
+            x (int): the wanted horizontal (x) padding of the square.
+            y (int): the wanted vertical (y) padding of the square.
+            id (int): the wanted identifier of the Base object.
+        """
+        super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        """Overrides the default behaviour of the __str__ method."""
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width)
+
+    # size attribute getter and setter.
+    @property
+    def size(self):
+        """Get and Set the size attribute of the Square."""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
+
+    # Methods"
