@@ -58,10 +58,26 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dummy = cls()
-        dummy.update(**dictionary)
-        return dummy
+        """Returns an instance with all attributes already set.
+        Args:
+            dictionary (dict): the values of the wanted instance
+        """
+        if cls.__name__ = "Rectangle":
+            new = cls(1, 1)
+        else:
+            new = cls(1)
+        new.update(**dictionary)
+        return new
 
-    def update(self, *args, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances."""
+        # from_json_string = __import__("").from_json_string
+        # create = __import__("").create
+        try:
+           th open(cls.__name__ + ".json", 'r') as f:
+                json_file = Base.from_json_string(f.read())
+                return [cls.create(**dct) for dct in json_file]
+        except IOError:
+            return [] 
