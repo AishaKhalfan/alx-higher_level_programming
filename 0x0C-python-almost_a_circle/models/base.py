@@ -71,6 +71,10 @@ class Base:
         new.update(**dictionary)
         return new
 
+    def update(self, *args, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value) 
+
     @classmethod
     def load_from_file(cls):
         """Returns a list of instances."""
