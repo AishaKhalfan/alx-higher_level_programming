@@ -52,6 +52,6 @@ class Base:
         Args:
             json_dtring (str): a string representing a list of dict
         """
-        if json_string is None and  len(json_string) < 0:
-            return list()
+        if json_string is None and len(json_string) < 0:
+            return '[]'
         return json.loads(json_string)
