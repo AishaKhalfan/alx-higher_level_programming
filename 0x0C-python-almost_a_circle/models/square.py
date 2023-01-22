@@ -40,3 +40,27 @@ class Square(Rectangle):
         self.height = value
 
     # Methods"
+    def update(self, *args, **kwargs):
+        """Updates the Square attributes.
+        Args:
+            args (list): attributes to be modified [id, size, x, y].
+            kwargs (dict): attributes to be modified.
+        """
+        dct = {}
+        if args is not None and len(args) > 0:
+            keys = ['id', 'size', 'x', 'y']
+            for i in range(len(args) if len(args) <= 4 else 4):
+                dct[keys[i]] = args[i]
+        else:
+            dct = kwargs
+
+        if len(dct) > 0:
+            for key, value in dct.items():
+                if key == 'id' and value is None:
+                    self.__init__(self.size, self.x, self.y)
+                else:
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Square"""
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
