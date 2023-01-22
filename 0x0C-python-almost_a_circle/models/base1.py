@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-"""This is the Base module.
-Contains the Base class which will be the
-“base” of all other classes in this project.
+"""Base Module
+Contains all the Base class which will be the
+"base" of other classes in this project
 """
 import json
 import csv
 import turtle
 
 
-class Base():
+class Base:
     """This class will be the “base” of all other classes in this project.
     The goal is to manage id attribute in all our future classes
     and to avoid duplicating the same code and same errors.
     Attributes:
         __nb_objects (int): the number of created Base objects.
     """
-
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -31,17 +30,14 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns the JSON string representation of list_dictionaries.
-        Args:
-            list_dictionaries (list): a list of dictionaries.
-        """
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        """Returns the JSON representation of a string object."""
+        if list_dictionaries is None or len(list_dictionaries) < 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Writes the JSON string representation of list_objs to a file.
+        """Writes the JSON string representation of list_objs to afile.
         Args:
             list_objs (list): a list of objects.
         """
@@ -54,9 +50,9 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
-        """Returns the list of the JSON string representation json_string.
+        """returns the list of the JSON string representation json_string
         Args:
-            json_string (str): string representing a list of dictionaries.
+            json_dtring (str): a string representing a list of dict
         """
         if json_string is None or json_string == "":
             return []
@@ -66,18 +62,24 @@ class Base():
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set.
         Args:
-            dictionary (dict): the values of the wanted instance.
+            dictionary (dict): the values of the wanted instance
         """
-        if cls.__name__ == "Rectangle":
+        if cls.__name__ = "Rectangle":
             new = cls(1, 1)
         else:
             new = cls(1)
         new.update(**dictionary)
         return new
 
+    def update(self, *args, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value) 
+
     @classmethod
     def load_from_file(cls):
         """Returns a list of instances."""
+        # from_json_string = __import__("").from_json_string
+        # create = __import__("").create
         try:
             with open(cls.__name__ + ".json", 'r') as f:
                 json_file = Base.from_json_string(f.read())
