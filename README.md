@@ -51,10 +51,14 @@
 - 0x0A. Python - Inheritance [Jan 9 23...Jan 10 23]
 - 0x0B. Python - Input/Output [Jan 10 23...Jan 11 23]
 - 0x0C. Python - Almost a circle [Jan 12 23...Jan 17 23]
-
+- 
 ## Higher-level programming - Databases
 - 0x0D. SQL - Introduction [Feb 14 23...Feb 15 23]
 - 0x0E. SQL - More queries [Feb 15 23...Feb 16 23]
+
+## Higher-level programming - Javascript
+- 0x12. JavaScript - Warm up [Mar 13 23...Mar 14 23]
+- 0x13. JavaScript - Objects, Scopes and Closures [Mar 14 23...Mar 15 23]
 
 ## Higher-level programming - AirBnB clone
 - 0x00. AirBnB clone - The console [Feb 6 23...Feb 13 23]
