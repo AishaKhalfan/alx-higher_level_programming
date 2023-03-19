@@ -7,8 +7,8 @@ Arguments:
     mysql password (str)
     database name (str)
     """
-import sys
 import MySQLdb
+import sys
 
 if __name__ == "__main__":
     mySQL_u = sys.argv[1]
@@ -24,3 +24,6 @@ if __name__ == "__main__":
 
     for row in rows:
         print(row)
+
+    cur.close()
+    db.close()
