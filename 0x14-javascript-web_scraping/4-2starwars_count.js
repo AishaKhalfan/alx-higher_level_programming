@@ -10,11 +10,11 @@ request(url, (err, res, body) => {
   let count = 0;
   for (let i = 0; i < data.results.length; i++) {
     const chars = data.results[i].characters;
-    for(let k = 0; k < chars.length; k++) {	  
-      if (chars.includes("18")){
-      count ++;
+    for (let k = 0; k < chars.length; k++) {
+      if (chars.includes('18')) {
+        count++;
+      }
     }
-   }
   }
   console.log(count);
 });
