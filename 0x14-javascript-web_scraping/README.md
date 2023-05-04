@@ -1,5 +1,5 @@
 # 0x14. JavaScript - Web scraping
-[![Scripting]] [![API]] [![Javascript]]
+[![Scripting]] [![API]] [![Javascript]]()
 
 # Resources
 ### Read or watch:
