@@ -1,5 +1,5 @@
 # 0x14. JavaScript - Web scraping
-[Scriptingt](#link){: .btn .btn--primary} [API](#link){: .btn .btn--primary} [Javascript](#link){: .btn .btn--primary}
+[![Scripting]] [![API]] [![Javascript]]
 
 # Resources
 ### Read or watch:
