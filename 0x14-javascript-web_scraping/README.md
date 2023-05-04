@@ -1,5 +1,9 @@
 # 0x14. JavaScript - Web scraping
-[![Scripting]] [![API]] [![Javascript]]()
+[![Scripting](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Button_icon.svg/1200px-Button_icon.svg.png)](https://en.wikipedia.org/wiki/Scripting_language)
+
+[![API](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Button_icon.svg/1200px-Button_icon.svg.png)](https://api.github.com/)
+
+[![JavaScript](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Button_icon.svg/1200px-Button_icon.svg.png)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 # Resources
 ### Read or watch:
